@@ -27,7 +27,7 @@ function setPizzaPreference(uid, preference) {
         var newContact = { "uid": uid, "messages": [], "pizzaPreference": null }
         contacts.push(newContact);
         return newContact;
-    });
+    }).call();
     contact.pizzaPreference = preference;
     
     fs.writeFileSync(FILEPATH, JSON.stringify({ "contacts": contacts }));
