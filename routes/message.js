@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.post('/:uid', (req, res, next) => {
     const uid = req.params.uid;
-    const message = req.body.message;
+    const message = JSON.parse(req.body).message;
 
     try {
         contactService.addMessage(uid, message);
