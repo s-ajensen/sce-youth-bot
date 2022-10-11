@@ -24,7 +24,7 @@ function addMessage(uid, message) {
 function setPizzaPreference(uid, preference) {
     var contacts = getContacts();
     var contact = contacts.find(c => c.uid === uid) ?? (() => {
-        var newContact = { "uid": uid, "messages": [], "pizza-preference": null }
+        var newContact = { "uid": uid, "messages": [], "pizzaPreference": null }
         contacts.push(newContact);
         return newContact;
     });
