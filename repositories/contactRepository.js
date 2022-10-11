@@ -15,7 +15,7 @@ function addMessage(uid, message) {
         var newContact = { "uid": uid, "messages": [], "pizza-preference": null }
         contacts.push(newContact);
         return newContact;
-    });
+    }).call();
     contact.messages.push(message);
     
     fs.writeFileSync(FILEPATH, JSON.stringify({ "contacts": contacts }));
